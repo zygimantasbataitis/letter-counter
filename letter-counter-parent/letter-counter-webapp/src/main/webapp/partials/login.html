@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="card card-container">
+        <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png">
+        <p id="profile-name" class="profile-name-card"></p>
+		<nav>
+		  <div class="nav nav-tabs text-md-center justify-content-md-between" id="nav-tab" role="tablist">
+		    <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">{{'APP.MENU.LOGIN' | translate}}</a>
+		    <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">{{'APP.MENU.REGISTER' | translate}}</a>
+		  </div>
+		</nav>
+		<div class="tab-content" id="nav-tabContent">
+		  <div class="tab-pane fade show active" id="nav-home" role="presentation" aria-labelledby="nav-home-tab">
+	        <form class="form-signin" ng-controller="LoginController"> <span id="reauth-email" class="reauth-email"></span>
+	            <input type="text" id="inputUserName" ng-model="username" class="form-control" placeholder="{{'FORM.LOGIN.USER_NAME' | translate}}" autofocus>
+	            <input type="password" id="inputPassword" ng-model="password" class="form-control" placeholder="{{'FORM.LOGIN.PASSWORD' | translate}}">
+	     	    <div id="remember" class="custom-control custom-checkbox mr-sm-2">
+			       <input type="checkbox" class="custom-control-input" id="customControlAutosizing" ng-model="rememberMe" value="remember-me">
+			       <label class="custom-control-label" for="customControlAutosizing">{{'FORM.LOGIN.REMEMBER_ME' | translate}}</label>
+			    </div>	            
+	            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" ng-click="login()">{{'FORM.LOGIN.LOGIN' | translate}}</button>
+	        </form>			  
+		  </div>
+		  <div class="tab-pane fade" id="nav-profile" role="presentation" aria-labelledby="nav-profile-tab">
+	        <form class="form-signin" ng-controller="RegisterController"> 
+	        	<span id="reauth-email" class="reauth-email"></span>
+	            <input type="text" id="inputUserName" ng-model="username" class="form-control" placeholder="{{'FORM.LOGIN.USER_NAME' | translate}}">
+	            <input type="password" id="inputPassword" ng-model="password" class="form-control" placeholder="{{'FORM.LOGIN.PASSWORD' | translate}}">
+	            <input type="text" id="firstName" ng-model="firstname" class="form-control" placeholder="{{'FORM.LOGIN.FIRST_NAME' | translate}}" autofocus>
+	            <input type="text" id="lastName" ng-model="lastname" class="form-control" placeholder="{{'FORM.LOGIN.LAST_NAME' | translate}}">
+	            <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit" ng-click="register()">{{'FORM.LOGIN.REGISTER' | translate}}</button>
+	        </form>		  
+		  </div>
+		</div>
+    </div>
+</div>

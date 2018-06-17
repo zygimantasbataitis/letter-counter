@@ -1,0 +1,49 @@
+<div class="float-right">	
+	<a href="#!/create_user" ng-show="hasRole('ADMIN')">
+   		<button type="button" class="btn btn-outline-success">{{'FORM.DEFAULT.CREATE' | translate}}</button>
+   	</a>	
+</div>
+<div class="page-header">
+    <h3>{{'APP.MENU.USERS' | translate}}</h3>
+</div>
+<form class="" ng-controller="UsersController">
+    <div>
+        <table st-table="displayedCollection" st-safe-src="users" class="table table-striped">
+            <thead>
+                <tr>
+                    <th st-sort="firstName">{{'FORM.USERS.FIRST_NAME' | translate}}</th>
+                    <th st-sort="lastName">{{'FORM.USERS.LAST_NAME' | translate}}</th>
+                    <th st-sort="email">{{'FORM.USERS.EMAIL' | translate}}</th>
+                    <th ng-show="hasRole('ADMIN')" st-sort="displayPassword">{{'FORM.USERS.PASSWORD' | translate}}</th>
+                    <th st-sort="contacts">{{'FORM.USERS.CONTACTS' | translate}}</th>
+                    <th ng-show="hasRole('ADMIN') || hasRole('CONTROLLER')" st-sort="documentId">{{'FORM.USERS.DOCUMENT_ID' | translate}}</th>
+                </tr>
+                <tr>
+                    <th colspan="6">
+                        <input st-search="" class="form-control" placeholder="{{'FORM.DEFAULT.GLOBAL_SEARCH' | translate}}" type="text">
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="user in displayedCollection">
+                    <td>{{user.firstName}}</td>
+                    <td>{{user.lastName}}</td>
+                    <td>{{user.email}}</td>
+                    <td ng-show="hasRole('ADMIN')">{{user.displayPassword}}</td>
+                    <td>{{user.contacts}}</td>
+                    <td ng-show="hasRole('ADMIN') || hasRole('CONTROLLER')">{{user.documentId}}</td>
+                    <td>
+                        <div class="float-right">	
+                        	<a href="" ng-click="deleteUser(user)" class="btn btn-outline-danger" ng-show="hasRole('ADMIN')" title="{{'FORM.DEFAULT.DELETE' | translate}}">
+								<span class="fa fa-trash-o"></span>
+							</a> 	
+							<a href="#!/edit_user/{{user.id}}" class="btn btn-outline-success" ng-show="hasRole('ADMIN')" title="{{'FORM.DEFAULT.EDIT' | translate}}">
+								<span class="fa fa-pencil"></span>
+							</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</form>

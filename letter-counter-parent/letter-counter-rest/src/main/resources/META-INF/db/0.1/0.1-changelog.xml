@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog 
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <changeSet id="init_table_newsentry" author="zygis">
+        <createTable tableName="newsentry">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="content" type="varchar(255)"/>
+            <column name="date" type="datetime"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="init_table_user" author="zygis">
+        <createTable tableName="user">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" />
+            </column>
+            <column name="user_name" type="varchar(255)"/>
+            <column name="first_name" type="varchar(255)"/>
+            <column name="last_name" type="varchar(255)"/>
+            <column name="email" type="varchar(255)"/>
+            <column name="password" type="varchar(255)"/>
+            <column name="enabled" type="int"/>
+            <column name="contacts" type="varchar(255)"/>
+            <column name="document_id" type="varchar(50)"/>
+        </createTable>
+    </changeSet>
+    
+    <changeSet id="init_table_user_roles" author="zygis" >
+        <createTable tableName="user_roles">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="user_id" type="int"/>
+            <column name="roles" type="varchar(255)"/>
+        </createTable>
+    </changeSet>
+           
+<!--     <changeSet id="init_tables_relationships" author="zygis"> -->
+<!--         <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="user_roles" constraintName="fk_user_roles_user" referencedColumnNames="id" referencedTableName="user"/> -->
+<!--     </changeSet> -->
+    
+    <changeSet id="init_data_for_tables" author="zygis">
+    	<sql>
+    		/*password admin*/
+    		insert into user (first_name, last_name, email, user_name, password, enabled, contacts, document_id) values ('Chris', 'Forsberg', 'admin@email.com', 'admin', '$2a$10$a33gAni/V19GEquVvKMWcONyzuzcuWNRqPPaVUN9O/GSnClJBV0TC', 1, '+123456789', 'DRIVER_LICENCE');
+    		insert into user (first_name, last_name, email, user_name, password, enabled, contacts, document_id) values ('Daigo', 'Saito', 'controller@email.com', 'controller', '$2a$10$a33gAni/V19GEquVvKMWcONyzuzcuWNRqPPaVUN9O/GSnClJBV0TC', 1, '+123456789', 'DRIVER_LICENCE');
+    		insert into user (first_name, last_name, email, user_name, password, enabled, contacts, document_id) values ('Ryan', 'Tuerck', 'junior@email.com', 'junior', '$2a$10$a33gAni/V19GEquVvKMWcONyzuzcuWNRqPPaVUN9O/GSnClJBV0TC', 1, '+123456789', 'DRIVER_LICENCE');
+    		insert into user (first_name, last_name, email, user_name, password, enabled, contacts, document_id) values ('Fredric', 'Aasbø', 'guest1@email.com', 'guest1', '$2a$10$a33gAni/V19GEquVvKMWcONyzuzcuWNRqPPaVUN9O/GSnClJBV0TC', 1, '+123456789', 'DRIVER_LICENCE');
+    		insert into user (first_name, last_name, email, user_name, password, enabled, contacts, document_id) values ('Michael', 'Whiddett', 'guest2@email.com', 'guest2', '$2a$10$a33gAni/V19GEquVvKMWcONyzuzcuWNRqPPaVUN9O/GSnClJBV0TC', 1, '+123456789', 'DRIVER_LICENCE');
+    		
+    		insert into user_roles (user_id, roles) values (1, 'ADMIN');
+    		insert into user_roles (user_id, roles) values (2, 'ADMIN');
+    		insert into user_roles (user_id, roles) values (3, 'ADMIN');
+    		insert into user_roles (user_id, roles) values (4, 'GUEST');
+    		insert into user_roles (user_id, roles) values (5, 'GUEST');    		    		
+    	</sql>
+    </changeSet>
+</databaseChangeLog>

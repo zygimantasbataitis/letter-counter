@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html ng-app="letterCounterApp" lang="en">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" http-equiv="Content-Type">
+        <title>{{'APP.TITLE' | translate}}</title>
+        <link href="//cdn.datatables.net/1.10.11/css/jquery.dataTables.min.css" rel="stylesheet">
+        <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jqueryui-editable/css/jqueryui-editable.css" rel="stylesheet">
+        <link href="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jquery-editable/css/jquery-editable.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
+        <link href="css/lib/nya-bs-select/nya-bs-select.min.css" rel="stylesheet">
+        <link href="css/custom.css" rel="stylesheet">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+    </head>
+    
+    <body>
+        <div class="loader" ng-hide="initialized">{{'APP.LOADING' | translate}}</div>
+        <nav class="navbar fixed-top navbar-light bg-light ng-hide navbar-expand-md" role="navigation" ng-show="isLogged()">
+            <div class="container">
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navBarId" ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">	
+                	<span class="sr-only">Toggle navigation</span> &#x2630;
+                </button>	
+                <a class="navbar-brand" href="#!/files">{{'APP.MENU.FILES' | translate}}</a>
+                	<div id="navBarId" class="collapse navbar-collapse" collapse="navCollapsed">
+	                    <ul class="nav navbar-nav">
+	                        <li ng-show="hasRole('ADMIN')" class="nav-item">
+	                        	<a href="#!/news" class="nav-link">{{'APP.MENU.NEWS' | translate}}</a>
+	                        </li>
+	                    </ul>
+	                    <ul class="nav navbar-nav">
+	                        <li ng-show="hasRole('ADMIN')" class="nav-item">
+	                        	<a href="#!/users" class="nav-link">{{'APP.MENU.USERS' | translate}}</a>
+	                        </li>
+	                    </ul>
+	                    <ul class="nav navbar-nav ml-auto">
+	                        <li class="nav-item">
+	                        	<a href="#!/login" class="nav-link" title="{{'APP.MENU.LOGIN' | translate}}"></a>
+	                        </li>
+
+	                        <li ng-show="!user" class="nav-item">
+	                        	<a href="#!/login" class="nav-link">
+			                		<button type="button" class="btn btn-secondary">{{'APP.MENU.LOGIN' | translate}}</button>
+			                	</a>
+	                        </li>
+							<li class="nav-item dropdown" ng-show="user">
+								<a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									 {{user.name}} <b class="caret"></b>
+								</a>
+								<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+									<a class="dropdown-item" ng-click="changeLanguage('lt')" href="">LT</a>
+									<a class="dropdown-item" ng-click="changeLanguage('en')" href="">EN</a>
+									<div class="dropdown-divider"></div>
+									<a class="dropdown-item" ng-click="logout()" href="">
+										<span class="fa fa-power-off"></span> {{'APP.MENU.USER.DISCONNECT' | translate}}
+									</a>
+								</div>
+							</li>	                        
+	                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container ng-hide" ng-show="initialized">
+            <div class="alert alert-danger" ng-show="error">{{error}}</div>
+            <div ng-view=""></div>
+        </div>
+		<footer>
+			<div class="footer-light">
+				<div class="container">
+					<p class="text-muted text-center">© 2018
+						|					
+	
+				          	<a href="" ng-click="changeLanguage('lt')">LT</a>
+				          	<a href="" ng-click="changeLanguage('en')">EN</a>
+	
+						| 
+					<a href="https://gitlab.com/users/zygisis/projects" target="_blank" title="Website development" class="text-muted">{{'APP.WEB_DEVELOPMENT' | translate}}</a>
+					</p>
+				</div>
+		    </div>
+		</footer>
+        <!-- Application information -->
+        <div class="footer" style="font-size: 9px; color: silver; padding-top: 3px">
+        	<span>{{'APP.VERSION' | translate}}: {{appInfo.version}}</span> 	
+        	<span>{{'APP.BUILD' | translate}}: {{appInfo.build}}</span>
+        </div>		       
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>	
+	
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+		<script type="text/javascript" src="js/lib/jquery-ui/1.11.4/jquery-ui.min.js"></script>
+		<script src="//cdn.datatables.net/1.10.11/js/jquery.dataTables.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/jqueryui-editable/js/jqueryui-editable.min.js"></script>	
+		<script src="//cdnjs.cloudflare.com/ajax/libs/x-editable/1.5.0/bootstrap3-editable/js/bootstrap-editable.min.js"></script>
+		
+		<script type="text/javascript" src="js/lib/angularjs/1.5.0/angular.min.js"></script>
+		<script type="text/javascript" src="js/lib/angularjs/1.5.0/angular-resource.min.js"></script>
+		<script type="text/javascript" src="js/lib/angularjs/1.5.0/angular-route.min.js"></script>
+		<script type="text/javascript" src="js/lib/angularjs/1.5.0/angular-cookies.min.js"></script>
+		<script type="text/javascript" src="js/lib/angularjs/1.5.0/angular-mocks.js"></script>
+		<script type="text/javascript" src="https://rawgit.com/betsol/angular-input-date/master/src/angular-input-date.js"></script>	
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular-sanitize.js"></script>
+		<script type="text/javascript" src="js/lib/angularjs/angular-translate.min.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-interpolation-messageformat/2.8.1/angular-translate-interpolation-messageformat.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-storage-cookie/2.8.1/angular-translate-storage-cookie.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-storage-local/2.8.1/angular-translate-storage-local.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-url/2.8.1/angular-translate-loader-url.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-loader-static-files/2.8.1/angular-translate-loader-static-files.js"></script>
+	    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-translate-handler-log/2.8.1/angular-translate-handler-log.js"></script>
+		
+	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script type="text/javascript" src="js/lib/nya-bs-select/nya-bs-select.min.js"></script>
+		<script type="text/javascript" src="js/lib/angular-notify/angular-notify.js"></script>
+
+		<script type="text/javascript" src="js/lib/smart-table/smart-table.min.js"></script>
+		<script type="text/javascript" src="js/config.js"></script>
+		<script type="text/javascript" src="js/utils/utils.js"></script>
+		<script type="text/javascript" src="js/services/services.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		
+		<script type="text/javascript" src="js/controllers/index/indexController.js"></script>
+		<script type="text/javascript" src="js/controllers/loginController.js"></script>
+		<script type="text/javascript" src="js/controllers/registerController.js"></script>
+	
+		<script type="text/javascript" src="js/controllers/index/createController.js"></script>
+		<script type="text/javascript" src="js/controllers/index/editController.js"></script>
+		<script type="text/javascript" src="js/controllers/edit/editUserController.js"></script>
+		<script type="text/javascript" src="js/controllers/view/UsersController.js"></script>
+		<script type="text/javascript" src="js/controllers/view/FilesController.js"></script>
+    </body>
+</html>

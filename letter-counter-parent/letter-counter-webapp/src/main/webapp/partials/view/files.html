@@ -1,0 +1,24 @@
+<div class="float-right">
+	<a ng-click="uploadFiles()>
+   		<button type="button" class="btn btn-outline-success">{{'FORM.FILES.UPLOAD_FILES' | translate}}</button>
+   	</a>	
+</div>
+<div class="page-header">
+	<h3>{{'APP.MENU.FILES' | translate}}</h3>
+</div>
+<form class="" ng-controller="FilesController">
+    <div ng-repeat="newsEntry in newsEntries">
+        <hr>
+        <div class="float-right">	
+        	<a href="" ng-click="deleteEntry(newsEntry)" class="btn btn-outline-danger" ng-show="hasRole('ADMIN')" title="{{'FORM.DEFAULT.DELETE' | translate}}">
+				<span class="fa fa-trash-o"></span>
+			</a> 	
+			<a href="#!/edit/{{newsEntry.id}}" class="btn btn-outline-success" ng-show="hasRole('ADMIN')" title="{{'FORM.DEFAULT.EDIT' | translate}}">
+				<span class="fa fa-pencil"></span>
+			</a>
+        </div>
+       	<h4>{{newsEntry.date | date}}</h4>
+        <p>{{newsEntry.content}}</p>
+    </div>
+    	<hr>
+</form>	

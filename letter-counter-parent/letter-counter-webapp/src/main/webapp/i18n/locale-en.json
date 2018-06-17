@@ -1,0 +1,61 @@
+{
+	"APP": {
+		"TITLE": "Letter counter",
+		"LOADING": "Loading...",
+		"VERSION": "Version",
+		"BUILD": "Build",
+		"WEB_DEVELOPMENT": "Web developement",
+		"MENU": {
+			"TITLE": "Letter counter",
+			"NEWS": "News",
+			"FILES": "Files",
+			"USERS": "Users",
+			"LOGIN": "Login",
+			"REGISTER": "Register",
+			"USER": {
+				"DISCONNECT": "Log out"
+			}
+	 	}
+	},
+	"FORM": {
+		"DEFAULT": {
+			"CREATE": "Add",
+			"EDIT": "Edit",
+			"SAVE": "Save",
+			"BACK": "Back",
+			"DELETE": "Delete",
+			"GLOBAL_SEARCH": "global search ..."
+		},
+		"LOGIN": {
+			"USER_NAME": "Login name",
+			"EMAIL": "Email",
+			"FIRST_NAME": "First name",
+			"LAST_NAME": "Last name",
+			"PASSWORD": "Password",
+			"REMEMBER_ME": "Remember me",
+			"LOGIN": "Login",
+			"REGISTER": "Register"
+		},
+		"NEWS": {
+			"CONTENT": "Content"
+		},
+		"FILES": {
+			"UPLOAD_FILES": "Upload files"
+		},		
+		"USERS": {
+			"FIRST_NAME": "First name",
+			"LAST_NAME": "Last name",
+			"EMAIL": "Email",
+			"PASSWORD": "Password",
+			"CONTACTS": "Contacts",
+			"DOCUMENT_ID": "Document ID"
+		},				
+		"ERROR_MESSAGES": {
+			"REQUIRED": "Field is mandatory",
+			"MINLENGTH": "Value must be greater then {{min}}",
+			"MAXLENGTH": "Value must me smaller then {{max}}",
+			"EMAIL": "Wrong email",
+			"AUTHENTIFICATION_FAILED": "Failed to login: wrong login name or password"
+		}
+	}
+}

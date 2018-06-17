@@ -1,0 +1,11 @@
+syntax: glob
+.project
+.classpath
+.settings
+.rockstarapps
+target
+bin
+.springBeans
+nbactions.xml
+nb-configuration.xml
+.idea/
