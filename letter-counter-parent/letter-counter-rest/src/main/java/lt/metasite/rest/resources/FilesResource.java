@@ -46,7 +46,7 @@ public class FilesResource {
 //	}	
 	
 	@PostMapping("/uploadFiles")
-	public @ResponseBody String uploadMultipleFileHandler(/*@RequestParam("files") MultipartFile[] files*/) {
+	public @ResponseBody String uploadMultipleFileHandler(@RequestParam("files") MultipartFile[] files) {
 		fileHelper.processFiles(/*new ArrayList<MultipartFile>()*/);
 
 		return "";

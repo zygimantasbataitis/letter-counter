@@ -7,6 +7,7 @@ var app = angular.module('letterCounterApp',
 		 'smart-table', 
 		 'nya.bootstrap.select', 
 		 'ngMockE2E',
+		 'angularFileUpload',
 		 'pascalprecht.translate']);
 
 	app.constant('urls', {

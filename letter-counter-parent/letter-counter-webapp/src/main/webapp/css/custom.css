@@ -32,11 +32,11 @@ div[ng-app] {
 .table {
 	width: 100%
 }
-
+/*
 form[editable-form]>div {
 	margin: 10px 0;
 }
-
+*/
 body, html {
     height: 100%;
 /*     background-repeat: no-repeat; */
