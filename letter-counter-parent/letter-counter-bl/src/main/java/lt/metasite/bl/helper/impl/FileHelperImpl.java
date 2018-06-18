@@ -3,11 +3,11 @@
  */
 package lt.metasite.bl.helper.impl;
 
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.net.URL;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
+import org.apache.commons.lang.StringUtils;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -20,47 +20,38 @@ import lt.metasite.bl.helper.FileHelper;
 @Component
 public class FileHelperImpl implements FileHelper {
 
+	private HashMap<String, Integer> wordsCountMap = new HashMap<>();
+	private static final String REGEX = "[!?,.]";
+	
 	@Override
-	public void processFiles(/*MultipartFile[] files*/) {
-		
-	/*	
-		String message = "";
-		for (int i = 0; i < files.length; i++) {
-			MultipartFile file = files[i];
-			//String name = names[i];
-			try {
-				byte[] bytes = file.getBytes();
-
-				// Creating the directory to store file
-				String rootPath = System.getProperty("catalina.home");
-				File dir = new File(rootPath + File.separator + "tmpFiles");
-				if (!dir.exists())
-					dir.mkdirs();
-
-				// Create the file on server
-				File serverFile = new File(dir.getAbsolutePath()
-						+ File.separator + name);
-				BufferedOutputStream stream = new BufferedOutputStream(
-						new FileOutputStream(serverFile));
-				stream.write(bytes);
-				stream.close();
-
-				//logger.info("Server File Location="
-				//		+ serverFile.getAbsolutePath());
-
-				//message = message + "You successfully uploaded file=" + name
-				//		+ "<br />";
-			} catch (Exception e) {
-				//String aa = "You failed to upload " + name + " => " + e.getMessage();
-			}
-		}*/
+	public void processFiles(Map<String, MultipartFile> files) {
+		wordsCountMap = new HashMap<>();
+		files.forEach((key, value) -> {
+			processFile(value);
+		});
 	}
 
 	@Override
-	public void processFile(MultipartFile files) {
-		URL url = getClass().getResource("Info/file1.txt");
-		File file = new File(url.getPath());
-		
+	public void processFile(MultipartFile file) {
+		if (!file.isEmpty()) {
+	        try {
+	            byte[] bytes = file.getBytes();
+	            String completeData = new String(bytes);
+	            
+	            completeData = completeData.replaceAll(REGEX, StringUtils.EMPTY);
+	    		String[] words = completeData.split("\\s+");
+	    		
+	    		Arrays.asList(words).forEach(word -> {
+	    			if (!wordsCountMap.containsKey(word)) {
+	    				wordsCountMap.put(word, 1);
+	    			} else {
+	    				wordsCountMap.put(word, wordsCountMap.get(word) + 1);
+	    			}
+	    		});
+	        } catch (Exception e) {
+	        	
+			}			
+		}
 	}
 
 }

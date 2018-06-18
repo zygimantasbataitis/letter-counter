@@ -1,19 +1,32 @@
 var app = angular.module('letterCounterApp', 
 		['ngRoute', 
 		 'ngCookies',
-		 'ngInputDate',	
+		 'ngInputDate',
 		 'letterCounterApp.services', 
 		 'letterCounterApp.utils',
 		 'smart-table', 
 		 'nya.bootstrap.select', 
 		 'ngMockE2E',
-		 'angularFileUpload',
 		 'pascalprecht.translate']);
 
 	app.constant('urls', {
 		APP: 'http://localhost:8080/letter-counter-app',
 	    REST_API: 'http://localhost:8080/letter-counter-rest/'
 	});
+	
+    app.directive('ngFiles', ['$parse', function ($parse) {
+
+        function fn_link(scope, element, attrs) {
+            var onChange = $parse(attrs.ngFiles);
+            element.on('change', function (event) {
+                onChange(scope, { $files: event.target.files });
+            });
+        };
+
+        return {
+            link: fn_link
+        }
+    } ])	
 
 	app.config(
 		[ '$routeProvider', '$locationProvider', '$httpProvider', '$translateProvider', 

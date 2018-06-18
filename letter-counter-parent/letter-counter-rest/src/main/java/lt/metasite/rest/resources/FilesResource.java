@@ -1,9 +1,6 @@
 package lt.metasite.rest.resources;
 
-import java.io.BufferedOutputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -12,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
+import org.springframework.web.multipart.MultipartRequest;
 
 import lt.metasite.bl.helper.FileHelper;
 
@@ -46,8 +44,8 @@ public class FilesResource {
 //	}	
 	
 	@PostMapping("/uploadFiles")
-	public @ResponseBody String uploadMultipleFileHandler(@RequestParam("files") MultipartFile[] files) {
-		fileHelper.processFiles(/*new ArrayList<MultipartFile>()*/);
+	public @ResponseBody String uploadMultipleFileHandler(MultipartRequest request) {
+		fileHelper.processFiles(request.getFileMap());
 
 		return "";
 	}	
