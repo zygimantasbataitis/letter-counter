@@ -151,7 +151,7 @@ app.run(function($rootScope, $location, $cookieStore, UserService, $httpBackend,
 		  };		
 		
 		if ($rootScope.selectedLanguage == null) {
-			$rootScope.selectedLanguage = "EN";
+			$rootScope.selectedLanguage = "LT";
 		} else {
 			$rootScope.selectedLanguage = $translate.use();	
 		}  

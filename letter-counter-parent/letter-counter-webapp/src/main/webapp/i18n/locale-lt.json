@@ -40,7 +40,8 @@
 			"CONTENT": "Turinys"
 		},
 		"FILES": {
-			"UPLOAD_FILES": "Upload files"
+			"UPLOAD_FILES": "Įkelti failus",
+			"CHOOSE_FILES": "Pasirinkite failus..."
 		},				
 		"USERS": {
 			"FIRST_NAME": "Vardas",

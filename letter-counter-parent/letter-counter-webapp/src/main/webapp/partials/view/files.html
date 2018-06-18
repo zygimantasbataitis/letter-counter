@@ -4,9 +4,9 @@
 <form ng-controller="FilesController">
 	<div class="form-group">
 		<div class="custom-file">
-			<div>
+			<div class="col-sm-5">
 				<input class="custom-file-input" type="file" id="file1" name="file" multiple ng-files="getTheFiles($files)" />
-				<label class="custom-file-label" for="file">Choose file...</label>				
+				<label class="custom-file-label" for="file">{{'FORM.FILES.CHOOSE_FILES' | translate}}</label>				
 			</div>
 			<input class="btn btn-outline-success" type="submit" ng-click="uploadFiles()" value="Upload" />
 		</div>	

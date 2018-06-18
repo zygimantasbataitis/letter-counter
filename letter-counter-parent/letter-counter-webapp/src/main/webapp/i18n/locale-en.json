@@ -40,7 +40,8 @@
 			"CONTENT": "Content"
 		},
 		"FILES": {
-			"UPLOAD_FILES": "Upload files"
+			"UPLOAD_FILES": "Upload files",
+			"CHOOSE_FILES": "Choose files..."
 		},		
 		"USERS": {
 			"FIRST_NAME": "First name",
