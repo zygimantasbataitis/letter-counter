@@ -60,8 +60,19 @@ services.factory('FilesService', function($resource) {
 });
 
 services.factory('FilesDownloadService', function($resource) {
-	return $resource('http://localhost:8080/letter-counter-rest/files/download_file/:id', {
-		id : '@id'	
+	return $resource('http://localhost:8080/letter-counter-rest/files/download_file/:id', {}, {
+		downloadFile : {
+			method : 'GET',
+			params : {
+				'id' : 'downloadFile'
+			},
+			transformResponse: function (data, headers) {
+		        var response = {};
+		        response.data = data;
+		        response.headers = headers();
+		        return response;
+		    }
+		},
 	});
 });
 

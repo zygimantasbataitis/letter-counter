@@ -1,12 +1,12 @@
 {
 	"APP": {
-		"TITLE": "RaidÅ¾iÅ³ skaiÄ¨iuoklÄ—",
-		"LOADING": "Ä®keliama...",
+		"TITLE": "Raidžių skaičiuoklė",
+		"LOADING": "Įkeliama...",
 		"VERSION": "Versija",
 		"BUILD": "Build",
-		"WEB_DEVELOPMENT": "PuslapiÅ³ kÅ«rimas",
+		"WEB_DEVELOPMENT": "Puslapių kūrimas",
 		"MENU": {
-			"TITLE": "RaidÅ¾iÅ³ skaiÄ¨iuoklÄ—",
+			"TITLE": "Raidžių skaičiuoklė",
 			"NEWS": "Naujienos",
 			"FILES": "Failai",
 			"USERS": "Naudotojai",
@@ -19,20 +19,20 @@
 	},
 	"FORM": {
 		"DEFAULT": {
-			"CREATE": "PridÄ—ti",
+			"CREATE": "Pridėti",
 			"EDIT": "Redaguoti",
-			"SAVE": "IÅ�saugoti",
+			"SAVE": "Išsaugoti",
 			"BACK": "Atgal",
-			"DELETE": "PaÅ�alinti",
-			"GLOBAL_SEARCH": "globali paieÅ�ka ...",
-			"DOWNLOAD": "Pasrisiųsti"
+			"DELETE": "Pašalinti",
+			"GLOBAL_SEARCH": "globali paieška ...",
+			"DOWNLOAD": "Parsisiųsti"
 		},	
 		"LOGIN": {
 			"USER_NAME": "Vartotojo vardas",
-			"EMAIL": "El. paÅ�tas",
+			"EMAIL": "El. paštas",
 			"FIRST_NAME": "Vardas",
-			"LAST_NAME": "PavardÄ—",			
-			"PASSWORD": "SlaptaÅ¾odis",		
+			"LAST_NAME": "Pavardė",			
+			"PASSWORD": "Slaptažodis",		
 			"REMEMBER_ME": "Prisiminti mane",
 			"LOGIN": "Prisijungti",
 			"REGISTER": "Registruotis"
@@ -41,14 +41,14 @@
 			"CONTENT": "Turinys"
 		},
 		"FILES": {
-			"UPLOAD_FILES": "Ä®kelti failus",
+			"UPLOAD_FILES": "Įkelti failus",
 			"CHOOSE_FILES": "Pasirinkite failus..."
 		},				
 		"USERS": {
 			"FIRST_NAME": "Vardas",
-			"LAST_NAME": "PavardÄ—",
-			"EMAIL": "El. paÅ�tas",
-			"PASSWORD": "SlaptaÅ¾odis",
+			"LAST_NAME": "Pavardė",
+			"EMAIL": "El. paštas",
+			"PASSWORD": "Slaptažodis",
 			"CONTACTS": "Kontaktai",
 			"DOCUMENT_ID": "Dokumentas"
 		},					

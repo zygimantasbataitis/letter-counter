@@ -32,14 +32,28 @@
                 });
         }
 		
-        
+        $scope.downloadReportFile = function (fileId) {
+        	FilesDownloadService.downloadFile({id: fileId}, function (response) {
+
+                var anchor = angular.element('<a/>');
+                anchor.attr({
+                    href: 'data:application/octet-stream;base64,' + response.data,
+                    target: '_self',
+                    download: response.headers.filename        
+                });
+
+                angular.element(document.body).append(anchor);
+                anchor[0].click();
+
+            });
+        }
         
         $scope.downloadFile = function(file) {
         	$scope.file_download = FilesDownloadService.get({id: file.id});
             var defer = $q.defer();
 
             $timeout(function() {
-                    $window.location = 'download?name=' + $scope.file_download.name;
+                    $window.location = 'download?name=' + name;
 
                 }, 1000)
                 .then(function() {

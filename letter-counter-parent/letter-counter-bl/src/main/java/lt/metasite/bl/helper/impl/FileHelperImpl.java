@@ -37,7 +37,7 @@ public class FileHelperImpl implements FileHelper {
 
 	private HashMap<String, Integer> wordsCountMap = new HashMap<String, Integer>();
 	private HashMap<String, Integer> wordsCountSortedMap = new HashMap<String, Integer>();
-	private static final String REGEX = "[!?,.]";
+	private static final String REGEX = "[!?,.;]";
 	private static final ImmutableMap<String, String> RESULT_FILE_NAMES = new ImmutableMap.Builder<String, String>()
 			.put("A-G", "[a-g]")
 			.put("H-N", "[h-n]")
