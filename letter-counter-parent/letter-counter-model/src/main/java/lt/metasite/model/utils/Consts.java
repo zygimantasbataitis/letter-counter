@@ -10,4 +10,5 @@ public final class Consts {
 	public static final String DELIM_DASH = "-";
 	public static final String BRACKET_LEFT = "(";
 	public static final String BRACKET_RIGHT = ")";
+	public static final String NEW_LINE = "\n";
 }

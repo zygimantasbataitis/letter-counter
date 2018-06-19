@@ -1,47 +1,48 @@
-File model, rest api
-Upload from UI files
-Calculate words frequency
-Result into seperate files and download instantly all
-save files and results
-
-REFACTOR
++File model, rest api
++Upload from UI files
++Calculate words frequency
++Result into seperate files
++save result files
+Threads usage
+Download file
+Docker container
 DEPLOY PROJECT TO SERVER
 
-========= FIXES=====
+REFACTOR
 
 ==================TASK==================
 1. Reikalavimai funkcionalumui
-1.1. Programa turi mokėti nuskaityti N tekstinių failų. Tekstiniuose failuose – angliški žodžiai,
-angliškas alfabetas.
-1.2. Programa turi suskaičiuoti, kiek kartų kartojasi per visus failus kiekvienas toks pats žodis.
-1.3. Rezultatą (žodis ir kartojimosi skaičius) įrašyti į keturis failus:
-1.3.1. žodžiai prasidedantys raide A-G;
-1.3.2. žodžiai prasidedantys raide H-N;
-1.3.3. žodžiai prasidedantys raide O-U;
-1.3.4. žodžiai prasidedantys raide V-Z.
+1.1. Programa turi mokÄ—ti nuskaityti N tekstiniÅ³ failÅ³. Tekstiniuose failuose ā€“ angliÅ�ki Å¾odÅ¾iai,
+angliÅ�kas alfabetas.
+1.2. Programa turi suskaiÄ¨iuoti, kiek kartÅ³ kartojasi per visus failus kiekvienas toks pats Å¾odis.
+1.3. RezultatÄ… (Å¾odis ir kartojimosi skaiÄ¨ius) ÄÆraÅ�yti ÄÆ keturis failus:
+1.3.1. Å¾odÅ¾iai prasidedantys raide A-G;
+1.3.2. Å¾odÅ¾iai prasidedantys raide H-N;
+1.3.3. Å¾odÅ¾iai prasidedantys raide O-U;
+1.3.4. Å¾odÅ¾iai prasidedantys raide V-Z.
 
-2. Reikalavimai užduoties išpildymui
-2.1. Technologijas, framework‘us galima rinktis laisvai.
-2.2. Programuojant turi būti panaudotos gijos (threads).
-2.3. Turi būti panaudotas pasirinktas Java development framework.
-2.4. Pateiktas programinis kodas turi būti tvarkingas, lengvai skaitomas.
+2. Reikalavimai uÅ¾duoties iÅ�pildymui
+2.1. Technologijas, frameworkā€�us galima rinktis laisvai.
+2.2. Programuojant turi bÅ«ti panaudotos gijos (threads).
+2.3. Turi bÅ«ti panaudotas pasirinktas Java development framework.
+2.4. Pateiktas programinis kodas turi bÅ«ti tvarkingas, lengvai skaitomas.
 2.5. Panaudotos gerosios programavimo praktikos: naudojamos objektinio ar funkcinio programavimo
 paradigmos, pritaikomi programinio kodo perpanaudojimo, paprastumo ir kiti pagrindiniai
 principai.
 
-3. Papildomi balai bus skiriami, jei (atlikti nebūtina):
-3.1. Bus paruošta web application, kuri turės GUI interface.
-3.2. Bus panaudotas file upload mechanizmas, bus galima uploadinti N failų.
+3. Papildomi balai bus skiriami, jei (atlikti nebÅ«tina):
+3.1. Bus paruoÅ�ta web application, kuri turÄ—s GUI interface.
+3.2. Bus panaudotas file upload mechanizmas, bus galima uploadinti N failÅ³.
 3.3. Rezultatai bus pateikiami ir web application GUI.
 3.4. Bus panaudotas software container sprendimas (pvz. Docker).
 
 Reikalavimai pateikiamam rezultatui:
-Užduotį prašytume pateikti el. paštu: jobs@metasite.net .
+UÅ¾duotÄÆ praÅ�ytume pateikti el. paÅ�tu: jobs@metasite.net .
 
-Prašome darbo rezultatą patalpinti prieinamoje vietoje peržiūrai 
+PraÅ�ome darbo rezultatÄ… patalpinti prieinamoje vietoje perÅ¾iÅ«rai 
 (pvz. www.herokuapp.com,
 https://aws.amazon.com/free/ , 
 https://cloud.google.com/free/ , 
 https://azure.microsoft.com/en-us/offers/ms-azr-0044p/ ir pan.), 
-o source code patalpinti kuriame nors viešajame kodo versijavimo
+o source code patalpinti kuriame nors vieÅ�ajame kodo versijavimo
 servise (github, bitbucket ar kt.).

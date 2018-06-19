@@ -41,6 +41,19 @@
             <column name="roles" type="varchar(255)"/>
         </createTable>
     </changeSet>
+    
+    <changeSet id="init_table_file" author="zygis">
+        <createTable tableName="file">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true"/>
+            </column>
+            <column name="create_date" type="datetime"/>
+            <column name="content" type="mediumblob"/>
+            <column name="name" type="varchar(255)"/>
+            <column name="path" type="varchar(255)"/>
+            <column name="user_id" type="bigint"/>
+        </createTable>
+    </changeSet>    
            
 <!--     <changeSet id="init_tables_relationships" author="zygis"> -->
 <!--         <addForeignKeyConstraint baseColumnNames="user_id" baseTableName="user_roles" constraintName="fk_user_roles_user" referencedColumnNames="id" referencedTableName="user"/> -->

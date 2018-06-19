@@ -9,6 +9,40 @@
 				<label class="custom-file-label" for="file">{{'FORM.FILES.CHOOSE_FILES' | translate}}</label>				
 			</div>
 			<input class="btn btn-outline-success" type="submit" ng-click="uploadFiles()" value="Upload" />
-		</div>	
-	</div>	
-</form>  
+		</div>			
+	</div>
+	<table st-table="displayedCollection" st-safe-src="dbFiles" class="table table-striped">
+		<thead>
+			<tr>
+				<th st-sort="createDate">{{'FORM.FILES.CREATE_DATE' | translate}}</th>
+				<th st-sort="name">{{'FORM.FILES.NAME' | translate}}</th>
+				<th st-sort="path">{{'FORM.FILES.PATH' | translate}}</th>
+			</tr>
+			<tr>
+				<th colspan="6">
+					<input st-search="" class="form-control" placeholder="{{'FORM.DEFAULT.GLOBAL_SEARCH' | translate}}" type="text">
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat="file in displayedCollection">
+				<td>{{file.createDate}}</td>
+				<td>{{file.name}}</td>
+				<td>{{file.path}}</td>
+				<td ng-show="isLogged()">
+					<div class="float-right">
+						<a href="" ng-click="downloadFile(file)" class="btn btn-outline-success" title="{{'FORM.DEFAULT.DOWNLOAD' | translate}}">
+							<span class="fa fa-download"></span>						
+						
+						<a href="" ng-click="deleteFile(file)" class="btn btn-outline-danger" ng-show="hasRole('ADMIN')" title="{{'FORM.DEFAULT.DELETE' | translate}}">
+							<span class="fa fa-trash-o"></span>
+						</a> 	
+						<a href="#!/edit_file/{{file.id}}" class="btn btn-outline-success" ng-show="hasRole('ADMIN')" title="{{'FORM.DEFAULT.EDIT' | translate}}">
+							<span class="fa fa-pencil"></span>
+						</a>
+					</div>
+				</td>
+			</tr>
+		</tbody>
+	</table>	
+</form>

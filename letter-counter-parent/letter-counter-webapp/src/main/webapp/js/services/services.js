@@ -54,7 +54,15 @@ services.factory('NewsService', function($resource) {
 });
 
 services.factory('FilesService', function($resource) {
-	return $resource('http://localhost:8080/letter-counter-rest/files/uploadFiles', {});
+	return $resource('http://localhost:8080/letter-counter-rest/files/:id', {
+		id : '@id'	
+	});
+});
+
+services.factory('FilesDownloadService', function($resource) {
+	return $resource('http://localhost:8080/letter-counter-rest/files/download_file/:id', {
+		id : '@id'	
+	});
 });
 
 services.factory('CreateNewsService', function($resource) {

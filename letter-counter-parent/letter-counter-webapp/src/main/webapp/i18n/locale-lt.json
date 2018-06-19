@@ -1,12 +1,12 @@
 {
 	"APP": {
-		"TITLE": "Raidžių skaičiuoklė",
-		"LOADING": "Įkeliama...",
+		"TITLE": "RaidÅ¾iÅ³ skaiÄ¨iuoklÄ—",
+		"LOADING": "Ä®keliama...",
 		"VERSION": "Versija",
 		"BUILD": "Build",
-		"WEB_DEVELOPMENT": "Puslapių kūrimas",
+		"WEB_DEVELOPMENT": "PuslapiÅ³ kÅ«rimas",
 		"MENU": {
-			"TITLE": "Raidžių skaičiuoklė",
+			"TITLE": "RaidÅ¾iÅ³ skaiÄ¨iuoklÄ—",
 			"NEWS": "Naujienos",
 			"FILES": "Failai",
 			"USERS": "Naudotojai",
@@ -19,19 +19,20 @@
 	},
 	"FORM": {
 		"DEFAULT": {
-			"CREATE": "Pridėti",
+			"CREATE": "PridÄ—ti",
 			"EDIT": "Redaguoti",
-			"SAVE": "Išsaugoti",
+			"SAVE": "IÅ�saugoti",
 			"BACK": "Atgal",
-			"DELETE": "Pašalinti",
-			"GLOBAL_SEARCH": "globali paieška ..."
+			"DELETE": "PaÅ�alinti",
+			"GLOBAL_SEARCH": "globali paieÅ�ka ...",
+			"DOWNLOAD": "Pasrisiųsti"
 		},	
 		"LOGIN": {
 			"USER_NAME": "Vartotojo vardas",
-			"EMAIL": "El. paštas",
+			"EMAIL": "El. paÅ�tas",
 			"FIRST_NAME": "Vardas",
-			"LAST_NAME": "Pavardė",			
-			"PASSWORD": "Slaptažodis",
+			"LAST_NAME": "PavardÄ—",			
+			"PASSWORD": "SlaptaÅ¾odis",		
 			"REMEMBER_ME": "Prisiminti mane",
 			"LOGIN": "Prisijungti",
 			"REGISTER": "Registruotis"
@@ -40,23 +41,23 @@
 			"CONTENT": "Turinys"
 		},
 		"FILES": {
-			"UPLOAD_FILES": "Įkelti failus",
+			"UPLOAD_FILES": "Ä®kelti failus",
 			"CHOOSE_FILES": "Pasirinkite failus..."
 		},				
 		"USERS": {
 			"FIRST_NAME": "Vardas",
-			"LAST_NAME": "Pavardė",
-			"EMAIL": "El. paštas",
-			"PASSWORD": "Slaptažodis",
+			"LAST_NAME": "PavardÄ—",
+			"EMAIL": "El. paÅ�tas",
+			"PASSWORD": "SlaptaÅ¾odis",
 			"CONTACTS": "Kontaktai",
 			"DOCUMENT_ID": "Dokumentas"
 		},					
 		"ERROR_MESSAGES": {
 			"REQUIRED": "Laukas yra privalomas",
-			"MINLENGTH": "ReikÃ…Â¡mÃ„â€” turi bÃ…Â«ti didesnÃ„â€” nei {{min}}",
-			"MAXLENGTH": "ReikÃ…Â¡mÃ„â€” maÃ…Â¾esnÃ„â€” uÃ…Â¾ {{max}}",
-			"EMAIL": "Neteisingai nurodytas el. paÃ…Â¡to adresas",
-			"AUTHENTIFICATION_FAILED": "Nepavyko prisijungti: blogas prisijungimo vardas arba slaptaÃ…Â¾odis"
+			"MINLENGTH": "ReikĆ�ā€¦Ć‚Ā�mĆ�ā€˛Ć¢ā‚¬ā€¯ turi bĆ�ā€¦Ć‚Ā«ti didesnĆ�ā€˛Ć¢ā‚¬ā€¯ nei {{min}}",
+			"MAXLENGTH": "ReikĆ�ā€¦Ć‚Ā�mĆ�ā€˛Ć¢ā‚¬ā€¯ maĆ�ā€¦Ć‚Ā¾esnĆ�ā€˛Ć¢ā‚¬ā€¯ uĆ�ā€¦Ć‚Ā¾ {{max}}",
+			"EMAIL": "Neteisingai nurodytas el. paĆ�ā€¦Ć‚Ā�to adresas",
+			"AUTHENTIFICATION_FAILED": "Nepavyko prisijungti: blogas prisijungimo vardas arba slaptaĆ�ā€¦Ć‚Ā¾odis"
 		}
 	}
 }

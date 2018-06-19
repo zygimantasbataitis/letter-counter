@@ -3,6 +3,8 @@
  */
 package lt.metasite.bl.helper;
 
+import java.io.File;
+import java.util.List;
 import java.util.Map;
 
 import org.springframework.web.multipart.MultipartFile;
@@ -13,7 +15,7 @@ import org.springframework.web.multipart.MultipartFile;
  */
 public interface FileHelper {
 
-	void processFiles(Map<String, MultipartFile> files);
+	List<File> processFiles(Map<String, MultipartFile> files);
 	
 	void processFile(MultipartFile files);
 
