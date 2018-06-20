@@ -3,14 +3,12 @@
  */
 package lt.metasite.bl.helper.impl;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +21,6 @@ import lt.metasite.bl.dao.FileDao;
 import lt.metasite.bl.helper.FileHelper;
 import lt.metasite.model.info.FileInfo;
 import lt.metasite.model.info.WordInfo;
-import lt.metasite.model.utils.Consts;
 
 /**
  * @author zygis
@@ -46,51 +43,18 @@ public class FileHelperImpl implements FileHelper {
 			.build();
 
 	@Override
-	public List<File> processFiles(Map<String, MultipartFile> files) {
+	public void processFiles(Map<String, MultipartFile> files) {
 		clearMaps();
 		files.forEach((key, value) -> {
 			processFile(value);
 		});
-		sortMap();	
-		List<File> resultFiles = createNewFiles(wrapToInfo());
-		
+		sortMap();
+
 		fileDao.removeAll();
 
-		resultFiles.forEach(f -> {		
-			fileDao.save(new lt.metasite.model.File(f, new byte[(int) f.length()]));		
-		} );
-		
-		return resultFiles;
-	}
-
-	private List<File> createNewFiles(List<FileInfo> fileInfos) {
-		List<File> result = new ArrayList<File>();
-		fileInfos.forEach(f -> {
-			try {
-				result.add((createFile(f)));
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
+		getWrappedFileInfos().forEach(f -> {
+			fileDao.save(new lt.metasite.model.File(f));
 		});
-		return result;
-	}
-
-	private File createFile(FileInfo f) throws IOException {
-		File file = new File("c://temp//" + f.getName() + ".txt");
-
-		// Write Content
-		FileWriter writer = new FileWriter(file);
-
-		f.getWordInfos().forEach(w -> {
-			try {
-				writer.write(w.getWord() + Consts.SPACE + w.getCount() + Consts.NEW_LINE);
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		});
-
-		writer.close();
-		return file;
 	}
 
 	@Override
@@ -111,7 +75,7 @@ public class FileHelperImpl implements FileHelper {
 					}
 				});
 			} catch (Exception e) {
-
+				
 			}
 		}
 	}
@@ -125,14 +89,16 @@ public class FileHelperImpl implements FileHelper {
 		wordsCountMap.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEachOrdered(x -> wordsCountSortedMap.put(x.getKey(), x.getValue()));
 	}
 
-	private List<FileInfo> wrapToInfo() {
+	private List<FileInfo> getWrappedFileInfos() {
 		List<FileInfo> result = new ArrayList<FileInfo>();
+		
+		Map<String, Integer> sortedMap = new TreeMap<String, Integer>(wordsCountMap);
 
 		RESULT_FILE_NAMES.keySet().forEach(key -> {
 			String regex = RESULT_FILE_NAMES.get(key);
 			FileInfo f = new FileInfo(key);
 
-			wordsCountSortedMap.forEach((k, v) -> {
+			sortedMap.forEach((k, v) -> {
 				if (k.substring(0, 1).matches(regex)) {
 					f.getWordInfos().add(new WordInfo(k, v));
 				}

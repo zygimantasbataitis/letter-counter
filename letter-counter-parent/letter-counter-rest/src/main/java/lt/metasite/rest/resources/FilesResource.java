@@ -1,6 +1,5 @@
 package lt.metasite.rest.resources;
 
-import java.io.IOException;
 import java.util.Base64;
 import java.util.List;
 
@@ -8,9 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.core.io.FileSystemResource;
 import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -21,8 +18,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartRequest;
-
-import com.google.common.io.ByteStreams;
 
 import lt.metasite.bl.dao.FileDao;
 import lt.metasite.bl.helper.FileHelper;
@@ -67,25 +62,11 @@ public class FilesResource {
 	@GetMapping(value = "/download_file/" + RestPaths.ID_PATH, produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)
 	public ResponseEntity<byte[]> downloadFile(@PathVariable Long id) {
 		File file = fileDao.find(id);
+		byte[] base64Bytes = Base64.getEncoder().encode(file.getContent());
 
-		java.io.File downloadFile = new java.io.File(file.getPath());
-										// ID
-		if (!downloadFile.exists()) { // handle FNF
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
-		}
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("filename", file.getName());
 
-		try {
-			FileSystemResource fileResource = new FileSystemResource(downloadFile);
-
-			byte[] base64Bytes = Base64.getEncoder().encode((ByteStreams.toByteArray(fileResource.getInputStream())));
-
-			HttpHeaders headers = new HttpHeaders();
-			headers.add("filename", fileResource.getFilename());
-
-			return ResponseEntity.ok().headers(headers).body(base64Bytes);
-		} catch (IOException e) {
-			//log.error("Failed to download file ", e);
-			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(null);
-		}
+		return ResponseEntity.ok().headers(headers).body(base64Bytes);
 	}
 }

@@ -9,7 +9,7 @@
 				<input class="custom-file-input" type="file" id="file1" name="file" multiple ng-files="getTheFiles($files)" />
 				<label class="custom-file-label" for="file">{{'FORM.FILES.CHOOSE_FILES' | translate}}</label>				
 			</div>
-			<input class="btn btn-outline-success" type="submit" ng-click="uploadFiles()" value="Upload" />
+			<input class="btn btn-outline-success" type="submit" ng-click="uploadFiles()" value="{{'FORM.FILES.UPLOAD_FILES' | translate}}" /> 
 		</div>			
 	</div>
 	<table st-table="displayedCollection" st-safe-src="dbFiles" class="table table-striped">
@@ -17,7 +17,6 @@
 			<tr>
 				<th st-sort="createDate">{{'FORM.FILES.CREATE_DATE' | translate}}</th>
 				<th st-sort="name">{{'FORM.FILES.NAME' | translate}}</th>
-				<th st-sort="path">{{'FORM.FILES.PATH' | translate}}</th>
 			</tr>
 			<tr>
 				<th colspan="6">
@@ -27,12 +26,11 @@
 		</thead>
 		<tbody>
 			<tr ng-repeat="file in displayedCollection">
-				<td>{{file.createDate}}</td>
+				<td>{{file.createDate | date: 'yyyy-MM-dd HH:mm'}}</td>
 				<td>{{file.name}}</td>
-				<td>{{file.path}}</td>
 				<td ng-show="isLogged()">
 					<div class="float-right">
-						<a href="" ng-click="downloadReportFile(file.id)" class="btn btn-outline-success" title="{{'FORM.DEFAULT.DOWNLOAD' | translate}}">
+						<a href="" ng-click="downloadGeneratedFile(file.id)" class="btn btn-outline-success" title="{{'FORM.DEFAULT.DOWNLOAD' | translate}}">
 							<span class="fa fa-download"></span>						
 						
 						<a href="" ng-click="deleteFile(file)" class="btn btn-outline-danger" ng-show="hasRole('ADMIN')" title="{{'FORM.DEFAULT.DELETE' | translate}}">

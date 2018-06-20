@@ -27,7 +27,7 @@ public class FileDaoImpl extends DaoImpl<File, Long> implements FileDao {
 		final CriteriaQuery<File> criteriaQuery = builder.createQuery(File.class);
 
 		Root<File> root = criteriaQuery.from(File.class);
-		criteriaQuery.orderBy(builder.desc(root.get(File_.CREATE_DATE)));
+		criteriaQuery.orderBy(builder.asc(root.get(File_.NAME)));
 
 		TypedQuery<File> typedQuery = getEntityManager().createQuery(criteriaQuery);
 		return typedQuery.getResultList();

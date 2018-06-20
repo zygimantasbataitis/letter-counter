@@ -42,7 +42,9 @@
 		},
 		"FILES": {
 			"UPLOAD_FILES": "Upload files",
-			"CHOOSE_FILES": "Choose files..."
+			"CHOOSE_FILES": "Choose files...",
+			"CREATE_DATE": "Create date",
+			"NAME": "Name"
 		},		
 		"USERS": {
 			"FIRST_NAME": "First name",

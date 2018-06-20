@@ -42,7 +42,9 @@
 		},
 		"FILES": {
 			"UPLOAD_FILES": "Įkelti failus",
-			"CHOOSE_FILES": "Pasirinkite failus..."
+			"CHOOSE_FILES": "Pasirinkite failus...",
+			"CREATE_DATE": "Sukūrimo data",
+			"NAME": "Pavadinimas"			
 		},				
 		"USERS": {
 			"FIRST_NAME": "Vardas",

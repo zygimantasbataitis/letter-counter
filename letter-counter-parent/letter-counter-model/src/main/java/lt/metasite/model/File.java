@@ -16,7 +16,9 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import lt.metasite.model.info.FileInfo;
 import lt.metasite.model.interfaces.IEntity;
+import lt.metasite.model.utils.Consts;
 import lt.metasite.model.utils.LConst;
 
 @Entity
@@ -50,10 +52,9 @@ public class File implements IEntity {
 	public File() {
 	}
 
-	public File(java.io.File file, byte[] content) {
-		this.content = content;
-		this.path = file.getPath();
-		this.name = file.getName();
+	public File(FileInfo fileInfo) {
+		this.content = fileInfo.getContent();
+		this.name = fileInfo.getName() + Consts.SUFFIX;
 		this.createDate = Calendar.getInstance().getTime();
 	}
 

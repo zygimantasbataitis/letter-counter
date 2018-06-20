@@ -32,7 +32,7 @@
                 });
         }
 		
-        $scope.downloadReportFile = function (fileId) {
+        $scope.downloadGeneratedFile = function (fileId) {
         	FilesDownloadService.downloadFile({id: fileId}, function (response) {
 
                 var anchor = angular.element('<a/>');
