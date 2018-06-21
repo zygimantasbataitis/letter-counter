@@ -1,15 +1,116 @@
-I returned from the City about three o'clock on that 
-May afternoon pretty well disgusted with life. 
-I had been three months in the Old Country, and was 
-fed up with it. 
-If anyone had told me a year ago that I would have 
-been feeling like that I should have laughed at him; 
-but there was the fact. 
-The weather made me liverish, 
-the talk of the ordinary Englishman made me sick, 
-I couldn't get enough exercise, and the amusements 
-of London seemed as flat as soda-water that 
-has been standing in the sun. 
-'Richard Hannay,' I kept telling myself, 'you 
-have got into the wrong ditch, my friend, and 
-you had better climb out.'
+The idea for a high-performance four-wheel-drive car was proposed by Audi's chassis engineer, Jörg Bensinger, in 1977, when he found that the Volkswagen Iltis could outperform any other vehicle in snow, no matter how powerful. Bensinger's idea was to start developing an Audi 80 variant in co-operation with Walter Treser, Director of Pre-Development.[6][7]
+
+European market
+Audi released the original Quattro to European customers in late 1980,[1] featuring Audi's quattro permanent four-wheel drive system (hence its name), and the first to mate four-wheel drive with a turbocharged engine.[1]
+
+The original engine was the 2,144 cc (131 cu in) (2.1 L), inline-5-cylinder 10 valve SOHC, with a turbocharger and intercooler. It produced 147 kW (200 PS; 197 bhp) and torque of 285 N⋅m (210 lbf⋅ft) at 3500 rpm, propelling the Quattro from 0 to 100 km/h (62 mph) in 7.1s, and reaching a top speed of over 220 km/h (137 mph).[1]
+
+The engine was eventually modified to a 2,226 cc (136 cu in) (2.2 L) inline-5 10 valve, still producing 147 kW (200 PS; 197 bhp), but with peak torque lower in the rev-range.[1] In 1989, it was then changed to a 2,226 cc (136 cu in) inline-5 20v(2.2 L 20v) DOHC setup producing 162 kW (220 PS; 217 bhp), now with a top speed of 230 km/h (143 mph).[1]
+
+Audi Quattros are referred to among owners and enthusiasts by their engine codes, to differentiate between the earlier and later versions: the earliest 2144 cc 10v being the "WR" engine, the 2226 cc 10v being the "MB" engine, and the later 20v being the "RR" engine. Hence, Quattro models may be referred to as either the WR Quattro, MB Quattro, and RR or "20v" Quattro, respectively.
+
+Quattro car production was 11,452 vehicles over the period 1980–1991,[1][3] and through this 11 year production span, despite some touch-ups, there were no major changes in the visual design of the vehicle. For the 1983 model year, the dash was switched from an analogue instrument cluster, to a green digital liquid crystal display (LCD) electronic instrument cluster. This was later changed in 1988 to an orange LCD electronic instrument cluster. The interior was redesigned in 1984, and featured a whole new dash layout, new steering wheel design, and new centre console design, the switches around the instrument panel were also redesigned at this time. In 1985 the dash changed slightly with harder foam and lost a diagonal stripe, the dash switches were varied slightly and the diff lock pull knob gave way to a two-position turning knob with volt and oil temp digital readouts.
+
+
+1987 MB-engined Audi quattro
+External styling received very little modification during its production run. Originally, the car had a flat fronted grille featuring four separate headlamp lenses, one for each of the low and high beam units. This was altered for the 1983 model year, and replaced with combined units featuring a single lens, but housing twin reflectors. This was changed again, for the 1985 model year, in what has become known as the 'facelift model' and included such alterations as a new sloping front grille, headlights, and trim and badging changes. Max speed was 124 mph.[2] The RR 20v Quattro also featured a new three spoke steering wheel design, leather covering for door arm rests, gloveboxes, centre console and door pockets. There was also a full length leather-wrapped centre console running all the way to the rear seats. The 20v was also the first Ur-Q to have 'quattro' script interior with partial leather seats. The floor on the driver's side had a bulge due to dual catalytic exhaust setup. The different models may be distinguished by the emblems on their boot lids: the WR had a vinyl 'quattro' decal or a brushed aluminium effect plastic emblem, the MB had chrome plated 'Audi', 'Audi rings' and 'quattro' emblems, whilst the RR had only chrome plated 'Audi rings'.
+
+The rear suspension was altered early on with geometry changes and removal of the rear anti-roll bar to reduce a tendency for lift-off oversteer. For the 1984 facelift, the wheel size went from 6x15-inch with 205/60-15 tyres to 8x15-inch wheels with 215/50-15 tyres. At the same time the suspension was lowered 20 mm with slightly stiffer springs for improved handling. For 1987, the Torsen centre differential was used for the first time, replacing the manual centre differential lock.[1]
+
+The last original Audi Quattro was produced on 17 May 1991, more than two years after the first models of the new Audi Coupe range (based on the 1986 Audi 80) had been produced.[8]
+
+North American market
+Sales of the Quattro in North America began with the 1983 model year.[9] They entered the all-wheel-drive market established by the AMC Eagle, the first full-time all-wheel-drive passenger car to reach mass production.[10][11]
+
+The North American Quattros were constructed concurrently and were of the same design as the European 1982 models (they did not include the minor cosmetic changes of the European 1983 model) and continued through 1986. Total sales in the U.S. were 664. The Canadian market cars were identical to the U.S. version with exception of the speedometer that was metric. Official sales figures for Canada were 99, which included 61 in 1983, 17 in 1984, 18 in 1985, and 3 in 1986.
+
+The U.S./Canadian cars were equipped with larger impact bumpers with built-in shock absorbers, like the rest of the 4000/Coupé models. They did not have anti-lock braking system (ABS), but included air conditioning and leather upholstery in most of the cars. Most of the 1984 and 1985 Canadian models came without sunroofs. The remainder of the electric, suspension, and cosmetic updates took place at the same time as the European cars.
+
+The initial 2.1 L (2144 cc, engine code "WX") engine for U.S./Canadian models included minor component and engine control unit (ECU) changes, lowered turbocharger boost pressure, different camshaft, as well as emission controls that consisted of a catalytic converter and lambda stoichiometric fuel control that lowered power to 160 hp (119 kW; 162 PS). Other mechanical specifications were identical to the European market vehicles. The WX engine was also used on Swiss and Japanese market cars. Audi built 200 special edition cars in 1988 with WX engine and analogue instruments, with everything else identical to the MB model of that year.
+
+Audi quattro Spyder concept (1991)
+The Audi quattro Spyder show car is a mid-engine coupe with 2.8 litre V6 engine rated 174 PS (128 kW; 172 hp) and 181 pound-feet (245 N⋅m) of torque, 5-speed manual gearbox, aluminium body, 1,100 kg (2,425 lb) kerb weight, orange or green body colour, and trapezoidal links suspension.
+
+The concept car was unveiled in 1991 Frankfurt Motor Show.[12][13]
+
+Audi quattro concept (2010)
+Main article: Audi quattro concept
+At the Paris Motor Show in 2010 Audi presented the quattro concept. It commemorates the 30th anniversary of the original Audi Quattro and the Audi quattro four-wheel-drive system. Based on the Audi RS5, it features a modified 2.5 L five-cylinder TFSI engine and the sixth generation of quattro transmission.[14] It was reported that Audi was considering a limited production model (200–500 cars) based on the quattro concept.[15]
+
+Audi Sport quattro concept (2013)
+
+Audi Sport quattro concept at the Frankfurt Motor Show
+The Audi Sport quattro concept was unveiled at the 2013 Frankfurt Motor Show to commemorate the 30th anniversary of the original Audi Sport quattro.[16][17] The show car features angular flat C-pillars, as well as the rectangular double headlights featuring Audi's Matrix LED technology, a spoiler at the lower edge of the rear window, rectangular tail lights, 21-inch wheels, carbon fiber-ceramic brake discs, bucket seats with integrated head restraints, multifunction sport steering wheel, two driving modes (race and setup) in virtual 3D displays, Audi MMI control unit, and air conditioning. The doors and fenders are aluminum, while the roof, hood, and the rear hatch are made of carbon fiber-reinforced polymer. The front suspension features five control arms per wheel while the rear has track-controlled trapezoidal link.
+
+Power is from a 4.0 TFSI V8 engine rated at 560 PS (412 kW; 552 hp) and 700 N⋅m (516 lb⋅ft), along with a disc-shaped electric motor rated at 150 PS (110 kW; 148 hp) and 400 N⋅m (295 lb⋅ft) (for combined power 700 PS (515 kW; 690 hp) and 800 N⋅m (590 lb⋅ft)), mated to an eight-speed tiptronic transmission. A liquid-cooled 14.1 kWh lithium-ion battery is in the rear, and the show car's range is claimed up to 50 km (31 mi) on electric power alone.
+
+At the 2014 Geneva Motor Show, Audi presented the new 2014 Audi TT Quattro Sport Concept. It is powered by a 2.0 L four-cylinder TFSI engine that can produce 420 PS (309 kW; 414 hp) and 331 N⋅m (244 lb⋅ft) of torque. It uses Audi's Quattro AWD system and an S Tronic dual-clutch transmission.[18]
+
+Motorsport
+Quattro - A1 and A2 evolutions
+Audi Sport Quattro S1 E2[19][20]
+Audi Quattro - 2007 Rallye Deutschland (cropped).jpg
+Audi Sport Quattro S1 driven during the 2007 Rallye Deutschland
+Overview
+Manufacturer	Audi AG
+Also called	S1, S1 Quattro "Audi Sport Quattro E2"
+Production	1985–1986
+Assembly	Ingolstadt, Germany
+Body and chassis
+Class	Coupé, Group B rally car
+Body style	2-door coupé
+Layout	longitudinal front-engine four-wheel-drive
+Related	Audi Quattro
+Powertrain
+Engine	2110 cc I5 turbo
+Transmission	6-speed manual
+Dimensions
+Wheelbase	2,204 mm (86.8 in)
+Length	4,240 mm (166.9 in)
+Width	1,860 mm (73.2 in)
+Height	1,344 mm (52.9 in)
+Kerb weight	1,200 kg (2,646 lb)
+Chronology
+Predecessor	Audi Sport Quattro
+
+Walter Röhrl driving a Quattro A2 at the 1984 Rally Portugal
+The original Audi Quattro competition car debuted in 1980, first as a development car, and then on a formal basis in the 1980 Janner Rally in Austria. Largely based on the bodyshell of the road-going Quattro models (in contrast to the forthcoming Group B cars), the engine of the original competition version produced approximately 300 bhp (224 kW; 304 PS). In 1981, Michèle Mouton became the first female driver to win a world championship rally, piloting an Audi Quattro.[1] Over the next three years, Audi would introduce the A1 and A2 evolutions of the Quattro in response to the new Group B rules, raising power from the turbocharged inline 5-cylinder engine to around 350 bhp (261 kW; 355 PS).
+
+The Quattro A1 debuted at the WRC 1983 season opener Monte Carlo Rally, and went on to win the Swedish Rally and the Rally Portugal in the hands of Hannu Mikkola. Driven by Stig Blomqvist, Mikkola and Walter Röhrl, the A2 evolution won a total of eight world rallies, three in 1983 and five in 1984. Two examples of the same car completely dominated the South African National Rally Championships during 1984 to 1988, with S.A. champion drivers Sarel van der Merwe and Geoff Mortimer.
+
+A 1988 Audi Ur-Quattro driven by Audi Tradition driver Luciano Viaro won the 13th Silvretta Classic Montafon.[21]
+
+Sport Quattro
+
+Michèle Mouton's Audi Sport Quattro at the 2006 Goodwood Festival of Speed
+The Audi Sport Quattro S1 was a Quattro programme car developed for homologation for Group B rallying in 1984, and sold as a production car in limited numbers.[1] It featured an all aluminium alloy 2,133 cc (2.1 L; 130.2 cu in) with bore X stroke of 79.3 mm (3.12 in) X 86.4 mm (3.40 in) DOHC 4 valves per cylinder, Bosch LH Jetronic fuel injection and KKK K27 turbocharger engine, slightly smaller than that of the Audi Quattro, in order to qualify for the 3-litre engine class after the scale factor applied to turbocharged engines. In road-going form, the engine was capable of producing 306 PS (302 bhp; 225 kW) @ 6700 rpm and 350 N⋅m (258 lb⋅ft) @ 3700 rpm, [22] [23] with the competition cars initially producing around 331 kW (450 PS; 444 bhp).[1]
+
+The vehicle also featured a body shell composed of carbon-kevlar[1] and boasting wider arches, wider wheels (nine inches as compared to the Ur-Quattro's optional 8-inch-wide (200 mm) wheel rim), the steeper windscreen rake of the Audi 80 (requested by the Audi Sport rally team drivers to reduce internal reflections from the dashboard for improved visibility) and, most noticeably, a 320 mm (12.6 in) shorter wheelbase.
+
+In addition to Group B competition in rallying, the Sport Quattro won the 1985 Pikes Peak International Hill Climb with Michèle Mouton in the driving seat, setting a record time in the process.[24] 224 cars of this "short version" Sport Quattro were built, and were offered for sale for 203,850 German Marks.[1]
+
+Sport Quattro S1 E2
+
+1985 Audi Sport Quattro S1
+MENU0:00
+Problems playing this file? See media help.
+
+Audi Sport Quattro S1 Pikes Peak
+
+Audi Sport Quattro at Legendy 2014 car show in Prague
+The Audi Sport Quattro S1 E2 was introduced at the end of 1985 as an update to the Audi Sport Quattro. The car featured an inline 5-cylinder engine that displaced 2,110 cc (128.8 cu in) and produced an officially quoted figure of 350 kW (480 PS; 470 bhp).[1] However, the turbocharger utilised a recirculating air system, with the aim of keeping the turbo spinning at high rpm, when the driver closed the throttle, either to back off during cornering, or on gearshifts. This allowed the engine to resume full power immediately after the resumption of full throttle, reducing turbo lag. The actual power figure was in excess of 500 bhp (373 kW; 507 PS) at 8000 rpm.[1]
+
+In addition to the improved power output, an aggressive aerodynamic kit was added that featured very distinctive wings and spoilers to the front and rear of the car to increase downforce. The weight was reduced to 1,090 kg (2,403 lb), and the S1 could accelerate from 0-100 km/h (62 mph) in 3.1 seconds.[1] Some of the cars were supplied with a "power-shift gearbox", a forerunner of the DSG technology.[1]
+
+The S1 E2 made its debut at the 1985 Rally Argentina, with Blomqvist driving. This variant was successful in the rally circuit, with Röhrl[1] and Christian Geistdörfer winning the 1985 San Remo Rally. A modified version of the E2, was also driven by Michèle Mouton.[1] The S1 evolution would become the final Group B car produced by Audi, with the works team withdrawing from the Championship following the 1986 rally in Portugal.[1] The final factory machines of 1986 were rated at 441 kW (600 PS; 591 bhp).[1] In 1987, the car won the Pikes Peak driven by Walter Röhrl.
+
+Sport Quattro RS 002 
+
+Audi Sport Quattro RS 002
+Audi Sport Quattro RS 002 - Sports prototype "Group S" was a car that was initially designed for the forthcoming Group S regulations for 1987. The car was tested by Walter Röhrl but it never raced; the Group S regulations were scrapped after a number of accidents involving fatalities during the 1986 season.
+
+The car has a longitudinal mid-engine layout and four-wheel drive.[25] The car is in the museum "Audi museum mobile" in Ingolstadt.
+
+Kerb weight: 1000 kg.
+
+Engine: I5 2,100 cm3
