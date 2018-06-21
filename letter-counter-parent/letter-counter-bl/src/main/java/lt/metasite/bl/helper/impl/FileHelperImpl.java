@@ -33,7 +33,6 @@ public class FileHelperImpl implements FileHelper {
 	private FileDao fileDao;
 
 	private HashMap<String, Integer> wordsCountMap = new HashMap<String, Integer>();
-	private HashMap<String, Integer> wordsCountSortedMap = new HashMap<String, Integer>();
 	private static final String REGEX = "[!?,.;]";
 	private static final ImmutableMap<String, String> RESULT_FILE_NAMES = new ImmutableMap.Builder<String, String>()
 			.put("A-G", "[a-g]")
@@ -48,7 +47,6 @@ public class FileHelperImpl implements FileHelper {
 		files.forEach((key, value) -> {
 			processFile(value);
 		});
-		sortMap();
 
 		fileDao.removeAll();
 
@@ -82,11 +80,6 @@ public class FileHelperImpl implements FileHelper {
 
 	private void clearMaps() {
 		wordsCountMap = new HashMap<>();
-		wordsCountSortedMap = new HashMap<>();
-	}
-
-	private void sortMap() {
-		wordsCountMap.entrySet().stream().sorted(Map.Entry.comparingByKey()).forEachOrdered(x -> wordsCountSortedMap.put(x.getKey(), x.getValue()));
 	}
 
 	private List<FileInfo> getWrappedFileInfos() {

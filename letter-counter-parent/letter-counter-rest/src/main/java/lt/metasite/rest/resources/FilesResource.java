@@ -8,6 +8,7 @@ import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -62,6 +63,9 @@ public class FilesResource {
 	@GetMapping(value = "/download_file/" + RestPaths.ID_PATH, produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)
 	public ResponseEntity<byte[]> downloadFile(@PathVariable Long id) {
 		File file = fileDao.find(id);
+		if (file == null) {
+			return ResponseEntity.status(HttpStatus.NO_CONTENT).body(null);
+		}
 		byte[] base64Bytes = Base64.getEncoder().encode(file.getContent());
 
 		HttpHeaders headers = new HttpHeaders();
