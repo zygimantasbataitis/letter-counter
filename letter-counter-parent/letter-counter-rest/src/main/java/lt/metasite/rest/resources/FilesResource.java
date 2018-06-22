@@ -22,6 +22,7 @@ import org.springframework.web.multipart.MultipartRequest;
 
 import lt.metasite.bl.dao.FileDao;
 import lt.metasite.bl.helper.FileHelper;
+import lt.metasite.bl.helper.UserHelper;
 import lt.metasite.model.File;
 import lt.metasite.rest.utils.RestPaths;
 
@@ -31,6 +32,8 @@ public class FilesResource {
 
 	@Autowired
 	private FileHelper fileHelper;
+	@Autowired
+	private UserHelper userHelper;
 
 	@Autowired
 	private FileDao fileDao;
@@ -52,12 +55,12 @@ public class FilesResource {
 
 	@GetMapping
 	public List<File> list() {
-		return fileDao.findAll();
+		return fileDao.findAll(userHelper.getCurrentUser());
 	}
 
 	@PostMapping("/upload_files")
 	public void uploadMultipleFileHandler(MultipartRequest request, HttpServletResponse response) {
-		fileHelper.processFiles(request.getFileMap());
+		fileHelper.processFiles(request.getFileMap(), userHelper.getCurrentUser());
 	}
 
 	@GetMapping(value = "/download_file/" + RestPaths.ID_PATH, produces = MediaType.APPLICATION_OCTET_STREAM_VALUE)

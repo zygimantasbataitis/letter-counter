@@ -19,6 +19,7 @@ import com.google.common.collect.ImmutableMap;
 
 import lt.metasite.bl.dao.FileDao;
 import lt.metasite.bl.helper.FileHelper;
+import lt.metasite.model.User;
 import lt.metasite.model.info.FileInfo;
 import lt.metasite.model.info.WordInfo;
 
@@ -42,21 +43,22 @@ public class FileHelperImpl implements FileHelper {
 			.build();
 
 	@Override
-	public void processFiles(Map<String, MultipartFile> files) {
-		clearMaps();
-		files.forEach((key, value) -> {
-			processFile(value);
-		});
+	public void processFiles(Map<String, MultipartFile> uploadedfiles, User currentUser) {
+		Thread th = new Thread() {
+			@Override
+			public void run() {
+				wordsCountMap = new HashMap<>();
 
-		fileDao.removeAll();
-
-		getWrappedFileInfos().forEach(f -> {
-			fileDao.save(new lt.metasite.model.File(f));
-		});
+				uploadedfiles.forEach((key, value) -> countWordsByFile(value));
+				fileDao.removeAll(currentUser);
+				getWrappedFileInfos()
+						.forEach(f -> fileDao.save(new lt.metasite.model.File(f, currentUser)));
+			}
+		};
+		th.start();
 	}
 
-	@Override
-	public void processFile(MultipartFile file) {
+	private void countWordsByFile(MultipartFile file) {
 		if (!file.isEmpty()) {
 			try {
 				byte[] bytes = file.getBytes();
@@ -78,28 +80,24 @@ public class FileHelperImpl implements FileHelper {
 		}
 	}
 
-	private void clearMaps() {
-		wordsCountMap = new HashMap<>();
-	}
-
 	private List<FileInfo> getWrappedFileInfos() {
-		List<FileInfo> result = new ArrayList<FileInfo>();
+		List<FileInfo> filesInfos = new ArrayList<FileInfo>();
 		
 		Map<String, Integer> sortedMap = new TreeMap<String, Integer>(wordsCountMap);
 
 		RESULT_FILE_NAMES.keySet().forEach(key -> {
 			String regex = RESULT_FILE_NAMES.get(key);
-			FileInfo f = new FileInfo(key);
+			FileInfo fileInfo = new FileInfo(key);
 
-			sortedMap.forEach((k, v) -> {
-				if (k.substring(0, 1).matches(regex)) {
-					f.getWordInfos().add(new WordInfo(k, v));
+			sortedMap.forEach((word, count) -> {
+				if (word.substring(0, 1).matches(regex)) {
+					fileInfo.getWordInfos().add(new WordInfo(word, count));
 				}
 			});
-			result.add(f);
+			filesInfos.add(fileInfo);
 		});
 
-		return result;
+		return filesInfos;
 	}
 
 }

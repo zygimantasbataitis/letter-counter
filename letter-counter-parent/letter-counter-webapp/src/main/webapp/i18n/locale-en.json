@@ -41,7 +41,7 @@
 			"CONTENT": "Content"
 		},
 		"FILES": {
-			"UPLOAD_FILES": "Upload files",
+			"COUNT_WORDS": "Count words",
 			"CHOOSE_FILES": "Choose files...",
 			"CREATE_DATE": "Create date",
 			"NAME": "Name"

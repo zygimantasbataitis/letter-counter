@@ -45,17 +45,20 @@ public class File implements IEntity {
 	@Column(name = "path", length = LConst.DEFAULT)
 	private String path;
 
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER)
 	@JoinColumn(name = "user_id", referencedColumnName = "id")
 	private User user;
 
 	public File() {
 	}
 
-	public File(FileInfo fileInfo) {
+	public File(FileInfo fileInfo, User user) {
 		this.content = fileInfo.getContent();
 		this.name = fileInfo.getName() + Consts.SUFFIX;
 		this.createDate = Calendar.getInstance().getTime();
+		if (user != null) {
+			this.user = user;	
+		}
 	}
 
 	public Long getId() {

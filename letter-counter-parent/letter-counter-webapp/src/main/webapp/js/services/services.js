@@ -43,7 +43,16 @@ services.factory('UserService', function($resource) {
 			headers : {
 				'Content-Type' : 'application/x-www-form-urlencoded'
 			}
-		},			
+		},
+		log_out : {
+			method : 'POST',
+			params : {
+				'action' : 'logout'
+			},
+			headers : {
+				'Content-Type' : 'application/x-www-form-urlencoded'
+			}
+		},		
 	});
 });
 

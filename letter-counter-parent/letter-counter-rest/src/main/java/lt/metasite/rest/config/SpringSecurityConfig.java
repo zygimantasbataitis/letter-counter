@@ -35,8 +35,6 @@ public class SpringSecurityConfig extends WebSecurityConfigurerAdapter {
 					.defaultSuccessUrl("/files")
 					.loginPage("/login")
 				.and()
-					.logout().permitAll()
-				.and()
 					.anonymous().disable()
 					.exceptionHandling().authenticationEntryPoint(unauthorizedEntryPoint());
 	}

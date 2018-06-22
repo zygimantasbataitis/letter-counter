@@ -41,7 +41,7 @@
 			"CONTENT": "Turinys"
 		},
 		"FILES": {
-			"UPLOAD_FILES": "Įkelti failus",
+			"COUNT_WORDS": "Skaičiuoti žodžius",
 			"CHOOSE_FILES": "Pasirinkite failus...",
 			"CREATE_DATE": "Sukūrimo data",
 			"NAME": "Pavadinimas"			

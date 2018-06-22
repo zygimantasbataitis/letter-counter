@@ -3,6 +3,10 @@ package lt.metasite.rest.resources;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -99,6 +103,21 @@ public class UserResource {
 		}
 
 		return new TokenTransfer(TokenUtils.createToken(userHelper.authenticate(username, password)));
+	}
+	
+	@PostMapping("/logout")
+	public String logoutDo(HttpServletRequest request, HttpServletResponse response) {
+		HttpSession session = request.getSession(false);
+		SecurityContextHolder.clearContext();
+		session = request.getSession(false);
+		if (session != null) {
+			session.invalidate();
+		}
+		for (Cookie cookie : request.getCookies()) {
+			cookie.setMaxAge(0);
+		}
+
+		return "logout";
 	}
 
 	@GetMapping("/documentIdTypes")

@@ -139,10 +139,11 @@ app.run(function($rootScope, $location, $cookieStore, UserService, $httpBackend,
 		};
 		
 		$rootScope.logout = function() {
+			UserService.log_out();
 			delete $rootScope.user;
 			delete $rootScope.authToken;
 			$cookieStore.remove('authToken');
-			$location.path("/files");
+			$location.path("/login");
 		};
 		
 		$rootScope.changeLanguage = function (langKey) {

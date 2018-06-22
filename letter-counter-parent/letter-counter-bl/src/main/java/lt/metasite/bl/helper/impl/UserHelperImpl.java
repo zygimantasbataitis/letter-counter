@@ -26,7 +26,7 @@ public class UserHelperImpl implements UserHelper {
 
 	public User getCurrentUser() {
 		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		if (authentication.isAuthenticated()) {
+		if (authentication != null && authentication.isAuthenticated()) {
 			return (User) authentication.getPrincipal();
 		}
 		return null;
